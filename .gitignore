@@ -1,0 +1,11 @@
+*.log
+history.jsonl
+*.env
+.env
+.env.*
+*.key
+*key*
+*secret*
+*.pem
+.DS_Store
+claude/.dotfiles-backup/
