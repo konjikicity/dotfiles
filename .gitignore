@@ -9,3 +9,16 @@ history.jsonl
 *.pem
 .DS_Store
 claude/.dotfiles-backup/
+
+# 鍵・秘匿系（絶対にコミットしない）
+.ssh/
+.netrc
+.yarnrc
+.emulator_console_auth_token
+home/.config/intelephense/
+home/.config/configstore/
+home/.config/yarn/
+
+# 設定本体ではないノイズ / 履歴
+home/.config/psysh/psysh_history
+home/.config/karabiner/automatic_backups/

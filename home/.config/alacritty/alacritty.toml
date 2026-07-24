@@ -1,0 +1,56 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+blink_interval = 400
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 20
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "FiraCode Nerd Font"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 10000
+
+[window]
+dynamic_title = true
+opacity = 0.87
+startup_mode = "SimpleFullscreen"
+
+[window.position]
+x = 10
+y = 300
+
+[window.dimensions]
+columns = 150
+lines = 40
+
+[window.padding]
+x = 5
+y = 0
+
+[env]
+TERM = 'xterm-256color'
+
+[general]
+live_config_reload = true
+import = ["~/.config/alacritty/themes/themes/tokyo-night-storm.toml"]
+
+[keyboard]
+bindings = [
+{ key = "Return", mods = "Shift", chars = "\n" }
+]

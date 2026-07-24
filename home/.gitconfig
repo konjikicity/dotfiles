@@ -1,0 +1,23 @@
+[user]
+	name = syu.onoda
+	email = shu.onoda@futurerays.biz
+[color]
+	ui = true
+[help]
+	autocorrect = 1
+[init]
+	defaultBranch = main
+[ghq]
+	root = ~/work
+[alias]
+    s = status
+   co = checkout
+    b = branch
+    l = log
+    a = add
+    c = commit
+    p = push
+   pl = pull
+    f = fetch
+[colo]
+	ui = auto

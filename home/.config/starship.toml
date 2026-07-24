@@ -1,0 +1,113 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+[](white)\
+$os\
+[](fg:white bg:blue)\
+$directory\
+${custom.dir_end}\
+$git_branch\
+$git_status\
+$line_break\
+$character"""
+
+right_format = """
+$status\
+$cmd_duration\
+$jobs\
+$python\
+$nodejs\
+$golang\
+$rust\
+$java\
+$ruby\
+$php\
+$docker_context"""
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "bg:white fg:black"
+
+[os.symbols]
+Macos = " "
+
+[directory]
+format = "[ $path ]($style)[$read_only]($style)"
+style = "bg:blue fg:bright-white"
+truncation_length = 3
+truncate_to_repo = true
+read_only = "\U000F033E "
+
+[git_branch]
+format = "[](fg:blue bg:green)[ $symbol$branch ]($style)"
+symbol = " "
+style = "bg:green fg:black"
+
+[git_status]
+format = "[($all_status$ahead_behind )]($style)[](fg:green)"
+style = "bg:green fg:black"
+conflicted = "~"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "*${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»"
+deleted = "✘"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[status]
+disabled = false
+format = "[](red)[✘ $status ](bg:red fg:bright-white)[](red) "
+
+[cmd_duration]
+min_time = 3000
+format = "[](yellow)[\U000F051F $duration ](bg:yellow fg:black)[](yellow) "
+
+[jobs]
+format = "[](black)[$symbol$number ](bg:black fg:green)[](black) "
+symbol = "≡ "
+
+[python]
+format = "[](blue)[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )](bg:blue fg:bright-white)[](blue) "
+symbol = " "
+
+[nodejs]
+format = "[](green)[$symbol($version) ](bg:green fg:black)[](green) "
+symbol = " "
+
+[golang]
+format = "[](blue)[$symbol($version) ](bg:blue fg:bright-white)[](blue) "
+symbol = " "
+
+[rust]
+format = "[](208)[$symbol($version) ](bg:208 fg:black)[](208) "
+symbol = "\U000F1617 "
+
+[java]
+format = "[](white)[$symbol($version) ](bg:white fg:black)[](white) "
+symbol = " "
+
+[ruby]
+format = "[](red)[$symbol($version) ](bg:red fg:bright-white)[](red) "
+symbol = " "
+
+[php]
+format = "[](purple)[$symbol($version) ](bg:purple fg:bright-white)[](purple) "
+symbol = " "
+
+[docker_context]
+format = "[](cyan)[$symbol$context ](bg:cyan fg:black)[](cyan) "
+symbol = " "
+
+[custom.dir_end]
+when = "! git rev-parse --is-inside-work-tree"
+format = "[](fg:blue)"

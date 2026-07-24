@@ -1,0 +1,41 @@
+import:
+  - ~/.config/alacritty/themes/themes/tokyo-night-storm.yaml
+  # - ~/.config/alacritty/themes/themes/solarized_dark.yaml
+  #- ~/.config/alacritty/themes/themes/dracula.yaml
+  #- ~/.config/alacritty/themes/themes/kanagawa_dragon.yaml
+# window
+window:
+  dynamic_title: true
+  startup_mode: Fullscreen
+  dimensions:
+    columns: 150
+    lines: 40
+  opacity: 0.95
+  padding:
+    x: 0
+    y: 0
+# cursor
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+  unfocused_hollow: true
+  blink_interval: 400
+# scrolling
+scrolling:
+  history: 10000
+# env
+env:
+  TERM: xterm-256color
+live_config_reload: true
+font:
+  size: 20
+  normal:
+    family: "FiraCode Nerd Font"
+  offset:
+    x: 0
+    y: 1
+  glyph_offset:
+    x: 0
+    y: 0
+draw_bold_text_with_bright_colors: true
