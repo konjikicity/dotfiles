@@ -8,7 +8,11 @@
 
 ## Git Operations
 
-- 自動的にコミットやプッシュを行わない
+- git push は禁止。ユーザーから明示的に指示された場合でも実行せず、実行すべきコマンドを提示するに留める
+- MR / PR の作成（`gh pr create`、`glab mr create`、Web UI 経由を含む）は禁止。同様にコマンドの提示に留める
+- 自動的にコミットは行わない
+- コミットについてコミット者は「claude code」ではなくgit config.user.email user.name で設定されているものとする
+- prefix + 内容のみとする(例: add: 管理画面の実装)
 
 ## Code Style Guidelines
 
